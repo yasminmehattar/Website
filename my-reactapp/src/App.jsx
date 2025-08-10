@@ -3,7 +3,7 @@ import Header from './header.jsx'
 import Footer from './Footer.jsx'
 import Food from './Food.jsx'
 import Card from './card.jsx'
-import Button from './button.jsx'
+import Button from './Button/button.jsx'
 
 
 function App() {
