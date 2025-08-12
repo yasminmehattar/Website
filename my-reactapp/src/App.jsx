@@ -7,6 +7,7 @@ import Card from './card.jsx'
 import Button from './Button/button.jsx'
 import Detail from './Details.jsx'
 import Usergreetings from './usergreetings.jsx'
+import lists from './list.jsx';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Food/>
       <Card/>
       <Detail name="Yasmin" age={25} ITDepartment={true}/>
+      <lists/>
       {/* <Detail/> */}
       <Button onClick={handleClick} />
       {/* <Usergreetings isloggedin={isLoggedIn} username="Yasmin"/> */}
@@ -33,7 +35,9 @@ function App() {
     </>
             )}
       {showPrompt && <Usergreetings isloggedin={isLoggedIn} username="Yasmin" />}
+       
         <Footer />
+        
          </>
   )
   
