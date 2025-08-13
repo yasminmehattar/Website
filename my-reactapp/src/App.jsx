@@ -8,7 +8,8 @@ import Button from './Button/button.jsx'
 import Detail from './Details.jsx'
 import Usergreetings from './usergreetings.jsx'
 import List from './list.jsx';
-import buton from './btn.jsx';
+import Buton from './btn.jsx';
+import Profile from './profile.jsx';
 
 
 function App() {
@@ -41,12 +42,13 @@ function App() {
       {/* <Detail/> */}
       <Button onClick={handleClick} />
       <br></br>
-      <buton/>
+      <Buton/>
 
       {Fruits.length>0 && <List items={Fruits} category="Fruits"/> }
       {Vegetables.length>0 && <List items={Vegetables} category="vegetables"/> }
       {/* <Usergreetings isloggedin={isLoggedIn} username="Yasmin"/> */}
       {/* <Footer/> */}
+      <Profile/>
       
       
    
