@@ -10,6 +10,8 @@ import Usergreetings from './usergreetings.jsx'
 import List from './list.jsx';
 import Buton from './btn.jsx';
 import Profile from './profile.jsx';
+import Mycomponent from './mycomponent.jsx';
+import Counter from './counter.jsx';
 
 
 function App() {
@@ -49,6 +51,9 @@ function App() {
       {/* <Usergreetings isloggedin={isLoggedIn} username="Yasmin"/> */}
       {/* <Footer/> */}
       <Profile/>
+      <Mycomponent/>
+      <Counter/>
+      
       
       
    
