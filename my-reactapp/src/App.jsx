@@ -7,7 +7,8 @@ import Card from './card.jsx'
 import Button from './Button/button.jsx'
 import Detail from './Details.jsx'
 import Usergreetings from './usergreetings.jsx'
-import lists from './list.jsx';
+import List from './list.jsx';
+import buton from './btn.jsx';
 
 
 function App() {
@@ -17,6 +18,17 @@ function App() {
   const handleClick = () => {
     setShowPrompt(true);        // now we should show the prompt
   };
+
+   const Fruits=[{id:1 ,name:"apple", calories:95},
+                    {id:2,name:"orange",calories:85},
+                    {id:3,name:"banana",calories:75},
+                    {id:4,name:"pineapple",calories:65},
+                    {id:5,name:"guava",calories:55}]
+   const Vegetables=[{id:6 ,name:"aple", calories:95},
+                    {id:7,name:"orage",calories:85},
+                    {id:8,name:"banaa",calories:75},
+                    {id:9,name:"pinepple",calories:65},
+                    {id:10,name:"gava",calories:55}]                 
    return(
     <>
       <Header/>
@@ -25,11 +37,17 @@ function App() {
       <Food/>
       <Card/>
       <Detail name="Yasmin" age={25} ITDepartment={true}/>
-      <lists/>
+      
       {/* <Detail/> */}
       <Button onClick={handleClick} />
+      <br></br>
+      <buton/>
+
+      {Fruits.length>0 && <List items={Fruits} category="Fruits"/> }
+      {Vegetables.length>0 && <List items={Vegetables} category="vegetables"/> }
       {/* <Usergreetings isloggedin={isLoggedIn} username="Yasmin"/> */}
       {/* <Footer/> */}
+      
       
    
     </>
