@@ -91,3 +91,78 @@
   color:hsl(0 0% 45%);
   cursor:pointer;
 }
+.container{
+ font-family: Arial, Helvetica, sans-serif;
+ text-align: center;
+}
+.Counter{
+  font-size: 10em;
+  margin-top:0;
+  margin-bottom:50px;
+}
+.button{
+  width:200px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin:0px 5px;
+  background-color: hsl(197, 100%, 58%);
+  color:white;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+.button:hover{
+  background-color: hsl(197, 100%, 38%);
+
+}
+.Onchange input:focus,
+.Onchange textarea:focus,
+.Onchange select:focus {
+  outline: none;
+  border: 2px solid #acaaaa;
+  box-shadow: none;
+}
+
+.colorcontainer{
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+h1{
+  margin: 50px;
+  font-size: 3rem;
+}
+.colordisplay{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid hsl(0 0% 80%);
+  border-radius: 25px;
+  margin-bottom: 25px;
+  
+}
+.colordisplay p{
+  font-size: 2em;
+  color:hsl(0 0% 20%);
+  text-align: center;
+}
+label{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+input[type="color"]{
+  transform: scale(2);
+  transform-origin: left; 
+  border: none;
+  background: none;
+  padding: 0;
+  margin-left:3px;
+
+}

@@ -12,6 +12,9 @@ import Buton from './btn.jsx';
 import Profile from './profile.jsx';
 import Mycomponent from './mycomponent.jsx';
 import Counter from './counter.jsx';
+import Mycomp from './onchangeeventhandler.jsx';
+import Colorpicker from './colorpicker.jsx';
+import Updatefunction from './updaterfunctions.jsx';
 
 
 function App() {
@@ -53,6 +56,9 @@ function App() {
       <Profile/>
       <Mycomponent/>
       <Counter/>
+      <Mycomp/>
+      <Colorpicker/>
+      <Updatefunction/>
       
       
       
