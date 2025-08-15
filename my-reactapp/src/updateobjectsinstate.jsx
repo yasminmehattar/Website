@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 function UpdateObject(){
-    const [car, setCar]=useState({Year:2025, make:"Ford", model:"Mustang"})
+    const [car, setCar]=useState({Year:"2025"
+        , make:"Ford", model:"Mustang"})
     function handleYearchange(event){
         setCar(car=>({...car, Year:event.target.value}))
     }
