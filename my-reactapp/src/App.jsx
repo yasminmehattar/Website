@@ -15,6 +15,8 @@ import Counter from './counter.jsx';
 import Mycomp from './onchangeeventhandler.jsx';
 import Colorpicker from './colorpicker.jsx';
 import Updatefunction from './updaterfunctions.jsx';
+import UpdateObject from './updateobjectsinstate.jsx';
+
 
 
 function App() {
@@ -59,6 +61,7 @@ function App() {
       <Mycomp/>
       <Colorpicker/>
       <Updatefunction/>
+      <UpdateObject/>
       
       
       
