@@ -16,6 +16,8 @@ import Mycomp from './onchangeeventhandler.jsx';
 import Colorpicker from './colorpicker.jsx';
 import Updatefunction from './updaterfunctions.jsx';
 import UpdateObject from './updateobjectsinstate.jsx';
+import Updatearray from './Updatearrayinstate.jsx';
+import Mycar from './ArrayObject.jsx';
 
 
 
@@ -62,6 +64,8 @@ function App() {
       <Colorpicker/>
       <Updatefunction/>
       <UpdateObject/>
+      <Updatearray/>
+      <Mycar/>
       
       
       
