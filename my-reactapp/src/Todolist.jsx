@@ -1,19 +1,22 @@
 import React, {useState} from'react'
 function ToDolist(){
 
-const[tasks, SetTask ]=useState(["Eat","drink","Sleep"])
+const[tasks, SetTasks ]=useState(["Eat","drink","Sleep"])
 const[newTask  ,setNewTask]=useState("")
 
 function handleInputchange(event){
-    SetTask(event.target.value)
+    setNewTask(event.target.value)
 }
 function Addtask(){
     if(newTask.trim()!==""){
-        SetTask
+        SetTasks(t=> [...t,newTask]);
+        setNewTask("")
     } 
 
 }
 function Deletetask(){
+    const Updatetasks=tasks.filter(element,indedx)
+
 
 }
 function MoveUptask(){
@@ -28,8 +31,8 @@ function MoveDowntask(){
         <button  className="addbutton" onClick={Addtask}>ADD</button>
         <ol>{tasks.map((task, index)=><li key={index}> <span className='text'>{task}</span>
         <button className='deletebutton' onClick={()=>Deletetask(index)}>Delete</button>
-        <button className='Moveupbutton' onClick={()=>MoveUptask(index)}>MoveUp</button>
-        <button className='MoveDownbutton' onClick={()=>MoveDowntask(index)}>MoveDown</button></li>)}
+        <button className='Movebutton' onClick={()=>MoveUptask(index)}>MoveUp</button>
+        <button className='Movebutton' onClick={()=>MoveDowntask(index)}>MoveDown</button></li>)}
 
         </ol>
        
@@ -40,3 +43,5 @@ function MoveDowntask(){
     )
 }
 export default ToDolist
+
+

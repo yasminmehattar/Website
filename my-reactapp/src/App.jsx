@@ -74,15 +74,19 @@ function App() {
    
     </>
             )}
-      {showPrompt && <Usergreetings isloggedin={isLoggedIn} username="Yasmin" />}
+      {showPrompt && (
+      <>
+      <Usergreetings isloggedin={isLoggedIn} username="Yasmin" />
       <ToDolist/>
+      </>
+   )}
        
         <Footer />
         
-         </>
-  )
+         
+  </>
   
   
-}
+  )}
 
 export default App
