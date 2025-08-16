@@ -1,7 +1,7 @@
 import React, {useState} from'react'
 function ToDolist(){
 
-const[tasks, SetTasks ]=useState(["Eat","drink","Sleep"])
+const[tasks, setTasks ]=useState(["Eat","drink","Sleep"])
 const[newTask  ,setNewTask]=useState("")
 
 function handleInputchange(event){
@@ -9,20 +9,35 @@ function handleInputchange(event){
 }
 function Addtask(){
     if(newTask.trim()!==""){
-        SetTasks(t=> [...t,newTask]);
+        setTasks(t=> [...t,newTask]);
         setNewTask("")
     } 
 
 }
-function Deletetask(){
-    const Updatetasks=tasks.filter(element,indedx)
+function Deletetask(index){
+    const Updatetasks=tasks.filter((element,i)=>i!==index);
+    setTasks(Updatetasks);
 
 
 }
-function MoveUptask(){
+function MoveUptask(index){
+    if(index>0){
+        const Updatetasks=[...tasks];
+       
+        [Updatetasks[index], Updatetasks[index-1]]=[Updatetasks[index-1], Updatetasks[index]];
+        
+        setTasks(Updatetasks);
+    }
 
 }
-function MoveDowntask(){
+function MoveDowntask(index){
+     if(index<tasks.length-1){
+        const Updatetasks=[...tasks];
+       
+        [Updatetasks[index], Updatetasks[index+1]]=[Updatetasks[index+1], Updatetasks[index]];
+        
+        setTasks(Updatetasks);
+    }
 
 }
     return(<div className='todolist'> 
