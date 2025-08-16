@@ -40,11 +40,11 @@ function MoveDowntask(index){
     }
 
 }
-    return(<div className='todolist'> 
-        <h1>To-Do-List</h1>
-         <input type="text" value={newTask} placeholder='Enter your task...' onChange={handleInputchange}/>
+    return(<div className='todolist'>  
+        <h1 className='h1'>To-Do-List</h1>
+         <input className='input' type="text" value={newTask} placeholder='Enter your task...' onChange={handleInputchange}/>
         <button  className="addbutton" onClick={Addtask}>ADD</button>
-        <ol>{tasks.map((task, index)=><li key={index}> <span className='text'>{task}</span>
+        <ol>{tasks.map((task, index)=><li  className="li" key={index}> <span className='text'>{task}</span>
         <button className='deletebutton' onClick={()=>Deletetask(index)}>Delete</button>
         <button className='Movebutton' onClick={()=>MoveUptask(index)}>MoveUp</button>
         <button className='Movebutton' onClick={()=>MoveDowntask(index)}>MoveDown</button></li>)}
