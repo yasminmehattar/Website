@@ -1,62 +1,62 @@
-import React, {useState} from'react'
+import { func } from 'prop-types';
+import React, {useState} from 'react'
 function ToDolist(){
+    const[tasks, setTasks]=useState([]);
+    const[newTask, setNewTask]=useState("");
 
-const[tasks, setTasks ]=useState(["Eat","drink","Sleep"])
-const[newTask  ,setNewTask]=useState("")
+    function handleinputchange(event){
+        setNewTask(event.target.value)
 
-function handleInputchange(event){
-    setNewTask(event.target.value)
-}
-function Addtask(){
-    if(newTask.trim()!==""){
-        setTasks(t=> [...t,newTask]);
-        setNewTask("")
-    } 
+    }
+    function Addtask(){
+        if(newTask.trim()!==""){
+            setTasks(t=>[...tasks, newTask])
+            setNewTask("")
 
-}
-function Deletetask(index){
-    const Updatetasks=tasks.filter((element,i)=>i!==index);
-    setTasks(Updatetasks);
+        }
 
 
-}
-function MoveUptask(index){
-    if(index>0){
-        const Updatetasks=[...tasks];
-       
-        [Updatetasks[index], Updatetasks[index-1]]=[Updatetasks[index-1], Updatetasks[index]];
-        
-        setTasks(Updatetasks);
+    }
+    function DeleteTask(index){
+        const updatedtasks=tasks.filter((element,i)=>i!==index);
+        setTasks(updatedtasks)
+
+    }
+    function MoveupTask(index){
+        if( index>0){
+        const updatedTasks=[...tasks];
+        [updatedTasks[index],updatedTasks[index-1]]=[updatedTasks[index-1],updatedTasks[index]];
+        setTasks(updatedTasks);
+        }
+
+    }
+    function MovedownTask(index){
+        if(index<tasks.length-1){
+        const updatedTasks=[...tasks];
+        [updatedTasks[index],updatedTasks[index+1]]=[updatedTasks[index+1],updatedTasks[index]];
+        setTasks(updatedTasks);
+        }
+
     }
 
-}
-function MoveDowntask(index){
-     if(index<tasks.length-1){
-        const Updatetasks=[...tasks];
-       
-        [Updatetasks[index], Updatetasks[index+1]]=[Updatetasks[index+1], Updatetasks[index]];
+
+    return( <>
+        <div className='todolist'>
+            <h1 className='h1'>To Do List</h1>
+            <input className="input" type="text" value={newTask} placeholder='Enter your task' onChange={handleinputchange}/>
+            <button className="addbutton" onClick={Addtask}>Add</button>
         
-        setTasks(Updatetasks);
-    }
-
-}
-    return(<div className='todolist'>  
-        <h1 className='h1'>To-Do-List</h1>
-         <input className='input' type="text" value={newTask} placeholder='Enter your task...' onChange={handleInputchange}/>
-        <button  className="addbutton" onClick={Addtask}>ADD</button>
-        <ol>{tasks.map((task, index)=><li  className="li" key={index}> <span className='text'>{task}</span>
-        <button className='deletebutton' onClick={()=>Deletetask(index)}>Delete</button>
-        <button className='Movebutton' onClick={()=>MoveUptask(index)}>MoveUp</button>
-        <button className='Movebutton' onClick={()=>MoveDowntask(index)}>MoveDown</button></li>)}
-
+        <ol>
+            {tasks.map((task,index)=><li className='li' key={index}><span className="text">{task}</span>
+            <button className="deletebutton" onClick={()=>DeleteTask(index)}>Delete</button>
+            <button className="Movebutton" onClick={()=>MoveupTask(index)}>Moveup</button>
+            <button className="Movebutton" onClick={()=>MovedownTask(index)}>Movedown</button>
+            </li>)}
         </ol>
-       
+        </div>
         
-
-    </div>
-
+        
+</>
     )
 }
 export default ToDolist
-
-
