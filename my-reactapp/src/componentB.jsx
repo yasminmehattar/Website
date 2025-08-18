@@ -9,4 +9,5 @@ function ComponentB(){
         <ComponentC />
     </div>)
 }
+
 export default ComponentB
