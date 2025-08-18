@@ -20,6 +20,8 @@ import Updatearray from './Updatearrayinstate.jsx';
 import Mycar from './ArrayObject.jsx';
 import ToDolist from './Todolist.jsx';
 import Useeffected from './useeffect.jsx';
+import Digitalclock from './Digitalclock.jsx';
+import ComponentA from './componentA.jsx';
 
 
 
@@ -45,6 +47,7 @@ function App() {
     <>
       <Header/>
       <Useeffected/>
+      <Digitalclock/>
             {!showPrompt && (
               <>
       <Food/>
@@ -80,6 +83,7 @@ function App() {
       <>
       <Usergreetings isloggedin={isLoggedIn} username="Yasmin" />
       <ToDolist/>
+      <ComponentA/>
       </>
    )}
        
