@@ -2,7 +2,6 @@ import React, {useState, createContext} from "react";
 import ComponentB from "./componentB";
 export const UserContext=createContext();
 
-
 function ComponentA(){
     const[user,setUser]=useState("yasmin");
     return(<div className="box">
