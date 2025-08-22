@@ -15,17 +15,20 @@ const App=()=>{
  };
 
  function App(){
-  return(
+  return
     <div>
-      <Message1 text="this is my second prop" bgcolor="green"/>
+      <Message1 text="this is my second prop" bgcolor="green">
+      Hello!
+      </Message1>
       </div>
-  )
+  
  }
  function Message1(props){
-  const {text,bgcolor}=props
+  const {text,bgcolor,children}=props
   return(
     <div>
       This is my first message
+      {children}
       {text}
       </div>
 
