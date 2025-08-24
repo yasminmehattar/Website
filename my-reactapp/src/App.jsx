@@ -23,6 +23,7 @@ import Useeffected from './useeffect.jsx';
 import Digitalclock from './Digitalclock.jsx';
 import ComponentA from './componentA.jsx';
 import Current from './useref.jsx';
+import Apps from './shortcut.jsx';
 
 
 
@@ -50,6 +51,7 @@ function App() {
       <Useeffected/>
       <Digitalclock/>
       <Current/>
+      <Apps/>
             {!showPrompt && (
               <>
       <Food/>
