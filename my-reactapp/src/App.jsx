@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './index.css'
 import Header from './header.jsx'
 import Footer from './Footer.jsx'
 import Food from './Food.jsx'

@@ -2,7 +2,7 @@ function Header() {
 
     return (
         <header>
-            <h1>My Web Site</h1>
+            <h1 className=" bg-red-100">My Web Site</h1>
             <nav>
                 <ul>
                     <li> <a href="#">HOme</a></li>

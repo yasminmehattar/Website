@@ -12,7 +12,7 @@ const Message=(props)=>{
 const Cat=()=>{
   return(
     <div className="p-2 border-2 rounded-lg border-amber-400 ">
-      <i className="fa-solid fa-house text-4xl text-blue-500"></i>
+      <i className="fas fa-house text-4xl text-blue-500"></i>
     </div>
   )
 
@@ -32,6 +32,8 @@ const Apps=()=>{
       <Cat/>
 
     </div>
+    <div className="bg-red-500 text-white p-4">Test</div>
+
           </>
  };
  
